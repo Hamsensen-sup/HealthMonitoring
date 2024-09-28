@@ -1,0 +1,1266 @@
+*{
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body{
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* CSS for smaller screens */
+@media only screen and (max-width: 600px) {
+  .carousel-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .carousel-text,
+  .carousel-image {
+    width: 100%;
+  }
+
+  .carousel-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .chart {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .chart p {
+    width: 100%;
+  }
+  .container {
+    flex-direction: column;
+    text-align: center;
+    margin-right: 200px;
+  }
+
+  #map {
+    width: 100%;
+  }
+
+  .note-text {
+    width: 100%;
+  }
+  .note-text button{
+    margin-left: 10px;
+  }
+
+}
+
+
+.announcement label {
+  display: block;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #b8b8b8;
+  padding: 8px;
+  width: 24.5rem;
+  border-radius: 5px;
+}
+.record-form label {
+  display: block;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #b8b8b8;
+  padding: 8px;
+  width: 24.5rem;
+  border-radius: 5px;
+}
+.spacing{
+  margin-bottom: 7rem;
+}
+/* Track */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2596be;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+ul{
+  list-style-type: none;
+}
+.container, .admin-content, .record-content, .record-form, .announcement-content, .cases-content, .container, .map-wrapper, .profile-margin, .map-container, .guest-content, .form-container{
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.adminbtn{
+  font-size: 15px;
+  border-radius: 7px;
+  border: 1px solid;
+  padding: 5px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+
+}
+.adminbtn:hover{
+  background-color: black;
+  color: white;
+}
+/*/////////////////////////guest-sidebar.php CSS///////////////////////*/
+.guest-sidebar{
+  border-radius: 7px;
+  margin: 1rem;
+  background: #2596be;
+  /* padding: 20px; */
+  width: 6rem;
+  height: 31rem;
+  position: fixed;
+  top: 4rem;
+  font-size: 18px;
+}
+
+.guest-navbar li{
+  padding: 10px;
+  text-decoration: none;
+  /* border-style: double; */
+}
+.guest-navbar a{
+  text-decoration: none;
+  font-size: 20px;
+}
+.guest-navbar i{
+  color: #c7eaff;
+  font-size: 2.5rem;
+  padding: 1rem;
+  transition: font-size 0.5s ease, color 0.5s ease;
+}
+.guest-navbar i:hover{
+  font-size: 3.5rem;
+  color: white;
+}
+/*/////////////////////////admin-sidebar.php CSS///////////////////////*/
+.sidebar{
+  background: #2596be;
+  /* padding: 20px; */
+  width: 19rem;
+  height: 100%;
+  position: fixed;
+  top: 4rem;
+  font-size: 18px;
+}
+.navbar li{
+  padding: 10px;
+  text-decoration: none;
+  transition: background 0.5s ease;
+  /* border-style: double; */
+}
+.navbar li:hover{
+  text-decoration: none;
+  background: white;
+  cursor: pointer;
+}
+.navbar a{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.navbar a:hover{
+  color: black;
+}
+.navbar i{
+  padding-right: 15px;
+}
+/*/////////////////////////admin-header.php CSS///////////////////////*/
+.header{
+  background-color: black;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.header h1{
+  color: white;
+  padding: 15px;
+  font-size: 25px;
+}
+.user-button {
+  padding-right: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 24px;
+  transition: font-size 0.1s ease;
+}
+.user-button:hover {
+  cursor: pointer;
+  font-size: 35px;
+}
+
+.logout-button {
+  border-radius: 7px;
+  background-color: red;
+  margin-top: 20px;
+  color: white;
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+.logout-button:hover {
+  background-color: black;
+  color: white;
+}
+/*/////////////////////////admin-index.php CSS///////////////////////*/
+.admin-content{
+  display: block;
+  justify-content: center;
+  padding: 2rem;
+  border-width: 1px;
+  background: white;
+  border-radius: 15px;
+  margin-right: 1rem;
+  margin-top: 5.5rem;
+  margin-bottom: -4rem;
+  margin-left: 20rem;
+  font-size: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.guest-content{
+  display: block;
+  justify-content: center;
+  padding: 2rem;
+  border-width: 1px;
+  background: white;
+  border-radius: 15px;
+  margin-right: 1rem;
+  margin-top: 5.5rem;
+  margin-bottom: -4rem;
+  margin-left: 8rem;
+  font-size: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/*/////////////////////////guest-announcement.php CSS///////////////////////*/
+.container{
+  padding: 2rem;
+  border-width: 1px;
+  background: white;
+  border-radius: 15px;
+  margin-right: 1rem;
+  margin-top: 5.5rem;
+  margin-bottom: -4rem;
+  margin-left: 8rem;
+  font-size: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.map-container{
+  padding: 2rem;
+  border-width: 1px;
+  background: white;
+  border-radius: 15px;
+  margin-right: 1rem;
+  margin-top: 5.5rem;
+  margin-bottom: -4rem;
+  margin-left: 8rem;
+  font-size: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.carousel-content {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-image {
+  border-radius: 7px;
+  width: 500px;
+  height: 300px;
+  margin-right: 20px;
+}
+/*/////////////////////////records.php CSS///////////////////////*/
+.search-bar{
+  margin-top: 1rem;
+}
+.search-bar input[type="text"] {
+  width: 20rem; /* Adjust the width as desired */
+  height: 2rem;
+  font-size: 15px;
+  border-radius: 5px;
+  border-width: 1px;
+  padding-left: 10px;
+  margin-bottom: 8px;
+
+}
+.searchbtn{
+  font-size: 15px;
+  border-radius: 7px;
+  border: 1px solid;
+  padding: 5px;
+  /* margin-left: 10px; */
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+.searchbtn:hover{
+  background-color: black;
+  color: white;
+}
+.sortbtn{
+  font-size: 15px;
+  border-radius: 7px;
+  border: 1px solid;
+  padding: 5px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+
+}
+.sortbtn:hover{
+  background-color: black;
+  color: white;
+}
+.record-content{
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  margin-right: 1rem;
+  margin-top: 5.5rem;
+  margin-bottom: -4rem;
+  margin-left: 20rem;
+  font-size: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.record-content h1{
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.record-content table th{
+  font-weight: bolder;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align:center;
+  background: #b8b8b8;
+  width: 8rem;
+  border-style: outset;
+}
+.record-content td {
+  border: 1px;
+  text-align: center;
+  border-style: outset;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.edit{
+  font-size: 1rem;
+  background: green;
+  padding: 5px;
+  color: white;
+  border-style: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.5s ease;
+}
+.view{
+  font-size: 1rem;
+  background: #2596BE;
+  padding: 5px;
+  color: white;
+  border-style: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.5s ease;
+}
+.delete{
+  font-size: 1rem;
+  background: red;
+  padding: 5px;
+  color: white;
+  border-style: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.5s ease;
+}
+.deleteAnnouncement{
+  font-size: 1rem;
+  background: red;
+  padding: 5px;
+  margin-top: 20px;
+  color: white;
+  border-style: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.5s ease;
+}
+.copy{
+  font-size: 1rem;
+  background: gray;
+  padding: 5px;
+  color: white;
+  border-style: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.5s ease;
+}
+.edit:hover{
+  background: white;
+  color: black;
+}
+.delete:hover{
+  background: white;
+  color: black;
+}
+.deleteAnnouncement:hover{
+  background: white;
+  color: black;
+}
+.view:hover{
+  background: white;
+  color: black;
+}
+.copy:hover{
+  background: white;
+  color: black;
+}
+.closebtn {
+    position: absolute;   /* Position it absolutely within its parent (record-form) */
+    top: 10px;            /* Position it 10px from the top of the record-form */
+    right: 15px;          /* Position it 10px from the right of the record-form */
+    cursor: pointer;      /* Changes the cursor to a hand when hovering over the close button */
+    /* ... other existing styles for close-btn ... */
+}
+.closebtn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.closebtn:hover, .closebtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*/////////////////////////form.php CSS///////////////////////*/
+.record-form{
+  position: relative;
+  padding: 20px;
+  align-items: center;
+  background: white;
+  justify-content: center;
+  border-radius: 10px;
+  margin-right: 1rem;
+  margin-top: 5.5rem;
+  margin-bottom: -4rem;
+  margin-left: 20rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.record-form h1{
+  font-weight: bolder;
+}
+.addrecordbtn{
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 7rem;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 7px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+.addrecordbtn:hover{
+  background-color: black;
+  color: white;
+}
+
+.record-form input[type="text"] {
+  font-size: 20px;
+  border-radius: 5px;
+  border-width: 1px;
+  width: 24.5rem; /* Adjust the width as desired */
+  height: 2.5rem;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-bottom: 8px;
+}
+.month {
+  margin-top: 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  border-width: 1px;
+  width: 24.5rem; /* Adjust the width as desired */
+  height: 2.5rem;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-bottom: 8px;
+}
+.year {
+  margin-top: 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  border-width: 1px;
+  width: 24.5rem; /* Adjust the width as desired */
+  height: 2.5rem;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-bottom: 8px;
+}
+.sex {
+  font-size: 20px;
+  border-radius: 5px;
+  border-width: 1px;
+  width: 24.5rem; /* Adjust the width as desired */
+  height: 2.5rem;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-bottom: 8px;
+}
+.purok {
+  font-size: 20px;
+  border-radius: 5px;
+  border-width: 1px;
+  width: 24.5rem; /* Adjust the width as desired */
+  height: 2.5rem;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-bottom: 8px;
+}
+/*/////////////////////////cases.php CSS///////////////////////*/
+.cases-content{
+  padding: 3rem;
+  background: white;
+  border-radius: 15px;
+  margin-right: 1rem;
+  margin-top: 5.5rem;
+  margin-bottom: -4rem;
+  margin-left: 20rem;
+  font-size: 15px;
+  padding-left: 3rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.cases-content h1{
+  text-align: center;
+  padding-bottom: 20px;
+}
+.cases-content table{
+  /* border: 1px solid; */
+  border-radius: 5px;
+}
+.cases-content table th{
+  font-weight: bolder;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align:center;
+  background: #b8b8b8;
+  width: 10rem;
+  border-style: outset;
+}
+.cases-content td {
+  border: 1px;
+  text-align: center;
+  padding: 10px;
+  border-style: outset;
+}
+.cases-content th {
+  transition: background 0.5s ease;
+}
+.cases-content th:hover {
+    background-color: #f2f2f2; /* You can choose any color */
+    cursor: pointer;
+}
+
+.sortable-icon::before {
+    content: "\25B2"; /* This is an up arrow, indicating the column is sorted ascending */
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.sortable-icon.desc::before {
+    content: "\25BC"; /* This is a down arrow, indicating the column is sorted descending */
+}
+
+
+/*/////////////////////////guest-statistics.php CSS///////////////////////*/
+.chart {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  border-width: 1px;
+  background: white;
+  border-radius: 15px;
+}
+.list-filter{
+  padding: 5px;
+  border-radius: 8px;
+  margin: 5px;
+  text-align: center;
+  font-size: 1rem;
+}
+.bar{
+  background-color: orange;
+  width: 100px;
+  border-radius: 5px;
+  margin-right: 4rem;
+}
+.labels {
+  border: 1px solid;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 20px;
+  margin-left: 4rem;
+}
+.labels span{
+  margin-bottom: 1.5rem;
+}
+.bar p{
+  padding-left: 10px;
+  padding-top: 5px;
+}
+/*/////////////////////////guest-overall.php CSS///////////////////////*/
+.h-container{
+  padding: 2rem;
+  border-width: 1px;
+  background: white;
+  border-radius: 15px;
+  margin-right: 1rem;
+  margin-top: 5.5rem;
+  margin-bottom: -4rem;
+  margin-left: 8rem;
+  font-size: 15px;
+  position: static;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.h-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 1rem;
+}
+
+.label {
+  width: 100px;
+  text-align: left;
+  padding-left: 1.5rem;
+}
+
+.bar-container {
+  width: 500px;
+  height: 20px;
+  background-color: #ddd;
+  margin-right: 10px;
+  position: static;
+  border-radius: 8px;
+  padding-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.h-bar {
+  height: 100%;
+  background-color: #007bff;
+  position: static;
+  border-radius: 8px;
+  padding-bottom: 2rem;
+}
+
+.bottom-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin-top: 10px;
+  margin-left: 6rem;
+}
+
+.bottom-labels span {
+  font-size: 12px;
+}
+/*/////////////////////////edit.php CSS///////////////////////*/
+.submitbtn{
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 6rem;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 7px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+.submitbtn:hover{
+  background-color: black;
+  color: white;
+}
+.submitbtn{
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 6rem;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 7px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+.submitbtn:hover{
+  background-color: black;
+  color: white;
+}
+/*/////////////////////////announcement.php CSS///////////////////////*/
+.announcement-content{
+  padding: 2rem;
+  border-width: 1px;
+  background: white;
+  border-radius: 15px;
+  margin-right: 1rem;
+  margin-top: 5.5rem;
+  margin-bottom: -4rem;
+  margin-left: 20rem;
+  font-size: 15px;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.uploadbtn{
+  font-size: 20px;
+  /* margin-top: 20px;
+  margin-left: 7rem; */
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 7px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+.uploadbtn:hover{
+  background-color: black;
+  color: white;
+}
+.savebtn{
+  margin-top: 10px;
+  margin-left: 8rem;
+  font-size: 20px;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 7px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+.savebtn:hover{
+  background-color: black;
+  color: white;
+}
+.add-image{
+  border-style: dashed;
+  border-radius: 8px;
+  height: 25rem;
+  width: 80rem;
+  margin-right: 1.5rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.announcement-image{
+  border-radius: 7px;
+  width: 200px;
+  height: 130px;
+  margin-right: 5rem;
+  margin-bottom: 10px;
+}
+.announcement,textarea{
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  font-size: 20px;
+  padding: 5px;
+  resize: none;
+}
+.upload-img{
+  padding-left: 5rem;
+}
+/*/////////////////////////map-dashboard.php CSS///////////////////////*/
+.map-table{
+  width: 100%;
+  border: 0.5px solid;
+}
+.map-stat textarea{
+  height: 15%;
+  resize: none;
+}
+.map-table table, .map-table th{
+  border: 0.5px hidden;
+  background: #b8b8b8;
+  padding: 10px;
+  text-align: left;
+}
+.map-table table, .map-table td{
+  border: 0.5px hidden;
+  padding: 5px;
+}
+.map-table tr{
+  text-align: left;
+}
+.map-stat p{
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+.map-stat h2{
+  padding-top: 10px;
+}
+.map-button{
+  padding: 7px;
+  background: green;
+  border-style: hidden;
+  border-radius: 5px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.return-button{
+  padding: 7px;
+  background: #b8b8b8;
+  border-style: hidden;
+  border-radius: 5px;
+  color: white;
+}
+.map-button:hover{
+  color: black;
+  cursor: pointer;
+  background: white;
+  transition: background 0.5s ease;
+}
+.return-button:hover{
+  color: white;
+  cursor: pointer;
+  background: black;
+  transition: background 0.5s ease;
+}
+.MapsButton{
+  display: inline-block;
+}
+/*/////////////////////////guest-mapping.php CSS///////////////////////*/
+.map-wrapper {
+  padding: 2rem;
+  border-width: 1px;
+  background: white;
+  border-radius: 15px;
+  margin-right: 1rem;
+  margin-top: 5.5rem;
+  margin-bottom: -4rem;
+  margin-left: 8rem;
+  font-size: 15px;
+  overflow: hidden; /* To hide the overflowing content of the map-container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.defaultbtn{
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#draggableMap {
+  cursor: grab;
+}
+#draggableContainer img {
+  transition: transform 0.1s;
+  overflow: hidden;
+}
+#draggableContainer::-webkit-scrollbar {
+    display: none;
+}
+#draggableContainer {
+    overflow: hidden;
+    position: relative; /* Ensure it's set to relative or absolute so children can be positioned in relation to this. */
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  border-radius: 7px;
+  background-color: #fefefe;
+  margin: 7% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  text-align: center;
+  /* max-width: 500px; */
+}
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    margin: 20% auto; /* increase top margin */
+    margin-bottom: 5%;
+  }
+  .modal{
+    overflow: auto;
+  }
+}
+.logoutmodal-box {
+  margin: 7% auto;
+  margin-right: 30px;
+  border-radius: 7px;
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%;
+  text-align: center;
+  /* max-width: 500px; */
+}
+.logoutModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*/////////////////////////login.php CSS///////////////////////*/
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Ensures it doesn't conflict with other elements */
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 80px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.box {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    background-color: #2596BE;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+form h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+form p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+form p a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+form p a:hover {
+    color: #0056b3;
+}
+
+.left-container{
+  width: 30%;
+  align-items: center;
+  padding: 2rem;
+  border-width: 1px;
+  background: white;
+  border-radius: 15px;
+  margin-right: 1rem;
+  margin-bottom: -4rem;
+  /* margin-left: 20rem; */
+  font-size: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.left-container p, h2{
+  padding-top: 1rem;
+}
+.right-container h2{
+  padding: 1rem;
+}
+.right-container ul, p{
+  list-style-type: disc;
+  padding: 10px;
+}
+.right-container{
+  width: 65%;
+  padding: 2rem;
+  border-width: 1px;
+  background: white;
+  border-radius: 15px;
+  margin-right: 1rem;
+  margin-bottom: -4rem;
+  font-size: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.profile-margin{
+  margin-left: 20rem;
+  margin-top: 5.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.profile-img{
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+}
+.right-container table th{
+  width: 100%;
+  padding: 5px;
+  background: #b8b8b8;
+  border-style: outset;
+}
+.right-container table td{
+  padding: 5px;
+  border-style: outset;
+
+}
+.left-container h2{
+  text-transform: uppercase;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    z-index: 1;
+    border: 1px solid #ddd;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: block;
+}
+table input[type="text"] {
+    height: 25px; /* Adjust this as needed */
+    border: 1px solid #ccc;
+    width: 90px;
+    padding: 2px 5px;
+    font-size: 15px; /* Adjust this as needed */
+    vertical-align: middle; /* Align input to the middle of the table cell */
+}
+.disease-modal {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Add to styles.css */
+.health-modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.healthmodal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 7% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    border-radius: 15px;
+}
+.health-modal label {
+  display: block;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #b8b8b8;
+  padding: 8px;
+  width: 100%;
+  border-radius: 5px;
+}
+.health-modal input[type="text"] {
+  font-size: 20px;
+  border-radius: 5px;
+  border-width: 1px;
+  width: 100%; /* Adjust the width as desired */
+  height: 2.5rem;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+.health-modal textarea{
+  margin-top: 20px;
+  resize: none;
+}
+.enlarged-input {
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 100%;  /* Takes the full width of its container */
+  font-size: 20px;  /* Makes the text inside the input a bit larger */
+  padding: 5px 10px; /* Some padding for better appearance */
+}
+
+.addrowbtn{
+  font-size: 20px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 7px;
+  border: 1px solid;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+.addrowbtn:hover{
+  background-color: black;
+  color: white;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover, .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-columns {
+    display: flex; /* Use Flexbox for the columns */
+    justify-content: space-between; /* Space out the columns */
+    align-items: flex-start; /* Align columns to the top */
+}
+
+.modal-left, .modal-right {
+    width: 45%; /* Using 45% to leave some space in between. Adjust as necessary */
+    box-sizing: border-box; /* Make sure padding doesn't make the boxes larger than their set width */
+}
+
+.modal-footer {
+    margin-top: 20px; /* Add some space between the button and the columns */
+}
+.profile-margin button{
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+.profile-margin button:hover{
+  background-color: black;
+  color: white;
+  transition: background 0.5s ease;
+  cursor: pointer;
+}
+.custom-label {
+  white-space: nowrap;
+  padding: 5px;
+  border-radius: 5px;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
